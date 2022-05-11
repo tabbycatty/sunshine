@@ -52,7 +52,7 @@ class wrapper_fb {
 public:
   wrapper_fb(drmModeFB *fb)
       : fb { fb }, fb_id { fb->fb_id }, width { fb->width }, height { fb->height } {
-    pixel_format = DRM_FORMAT_XRGB8888;
+    pixel_format = DRM_FORMAT_NV12;
     modifier     = DRM_FORMAT_MOD_INVALID;
     std::fill_n(handles, 4, 0);
     std::fill_n(pitches, 4, 0);
